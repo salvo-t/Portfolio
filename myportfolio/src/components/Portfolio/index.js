@@ -1,55 +1,40 @@
-import React, { useState } from 'react';
-import Project from "../Project";
+import React from 'react';
+import note from '../../assets/cover/note.png';
+import text from '../../assets/cover/jate.png';
+import back from '../../assets/cover/backend.png';
+import './portfolio.css'
+
 
 function Portfolio() {
-
-  // Replace links with deployed projects and GitHub repos
-  const [projects] = useState([
-    {
-
-      name: 'surf-report',
-      description: 'MERN Stack',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-    {
-      name: 'pastel-puzzels',
-      description: 'MERN Stack',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-    {
-      name: 'run-buddy',
-      description: 'HTML/CSS',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-    {
-      name: 'led-wall',
-      description: 'Node/IoT',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-    {
-      name: 'calculator',
-      description: 'React/JavaScript/CSS',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-  ]);
-
   return (
-    <div>
-      <div className="flex-row">
-        {projects.map((project, idx) => (
-          <Project
-            project={project}
-            key={"project" + idx}
-          />
-        ))}
+
+    <>
+
+      <div>
+        <a href='https://github.com/salvo-t/Note-Taker'>github repo</a>
+        <p>This is my note taker app made deployed with heroku</p>
+        <img src={note} alt='' className='portfolio-img'></img>
       </div>
-    </div>
-  );
+
+      <div>
+      <p>______________________________________________________________________________________________________________</p>
+      <p></p>
+        <a href='https://github.com/salvo-t/Text-editor'>github repo</a>
+        <p>This is my text editor made with PWA</p>
+        <img src={text} alt='' className='portfolio-img'></img>
+      </div>
+
+      <div>
+      <p>______________________________________________________________________________________________________________</p>
+      <p></p>
+        <a href='https://github.com/salvo-t/E-commerce-back-end'>github repo</a>
+        <p>This is my ecommerce backened using insomnia</p>
+        <img src={back} alt='' className='portfolio-img'></img>
+      </div>
+
+    </>
+
+  )
 };
 
 export default Portfolio;
